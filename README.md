@@ -50,3 +50,30 @@
 - Sequel Pro https://www.sequelpro.com/
 - Table Plus https://tableplus.com/
 - MySQL Workbench https://www.mysql.com/jp/products/workbench/
+
+## Setting.json
+
+```json
+    "workbench.colorTheme": "Visual Studio 2019 Dark",
+
+    // 現在の行を強調表示する
+    "editor.renderLineHighlight": "all",
+    // 空白文字を表示する。
+    "editor.renderWhitespace": "all",
+    // スペース2個インデント
+    "editor.tabSize": 2,
+    // ファイル保存時に最新の行を末尾に挿入する
+    "files.insertFinalNewline": true,
+    // アイコンテーマの指定
+    "workbench.iconTheme": "vscode-icons",
+    "editor.acceptSuggestionOnEnter": "off",
+    "intelephense.diagnostics.undefinedClassConstants": false,
+    "intelephense.diagnostics.undefinedConstants": false,
+    "intelephense.diagnostics.undefinedFunctions": false,
+    "intelephense.diagnostics.undefinedMethods": false,
+    "intelephense.diagnostics.undefinedTypes": false,
+    "namespaceResolver.sortAlphabetically": true,
+    "namespaceResolver.sortOnSave": true,
+    // VSCodeデフォルトのサジェストを無効化（説明が衝突するため）
+    "php.suggest.basic": false,
+```
