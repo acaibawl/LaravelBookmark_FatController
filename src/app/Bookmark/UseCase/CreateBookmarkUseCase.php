@@ -2,12 +2,11 @@
 
 namespace App\Bookmark\UseCase;
 
-use App\Lib\LinkPreview\LinkPreview;
 use App\Lib\LinkPreview\LinkPreviewInterface;
 use App\Models\Bookmark;
-use Dotenv\Exception\ValidationException;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Validation\ValidationException;
 
 final class CreateBookmarkUseCase
 {
@@ -50,7 +49,7 @@ final class CreateBookmarkUseCase
             $model->page_description = $preview->description;
             $model->page_thumbnail_url = $preview->cover;
             $model->save();
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             Log::error($e->getMessage());
             throw ValidationException::withMessages([
                 'url' => 'URLが存在しない等の理由で読み込めませんでした。変更して再度投稿してください'
